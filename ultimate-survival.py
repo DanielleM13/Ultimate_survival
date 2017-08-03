@@ -16,8 +16,6 @@ So you keep walking, now you hear a rustle in the bush.. Do you want to
 a) investigate or b) to run away?
 '''
 
-
-
 S111 = '''
 You only have a little bit of water left. Do you want to a) drink it now or
 b) save it for later?
@@ -44,7 +42,11 @@ playing dead! Unfortunately, it is a predator and it attacks you! You bleed to d
 '''
 S12 = '''
 You eat the berries! Your stomach starts to feel funny, and you are a little
+
 skeptical. You decide to ignore the funny feeling and continue on the path.
+
+skeptical. Do you a) continue eating or b) stop eating and keep walking.
+
 '''
 S2 = '''
 You take the trail and fall into a hole that was covered by a bunch of bushes
@@ -122,6 +124,7 @@ if user_input == "a":
             print(S221)
         else:
             print(S222)
+
             if user_input=="a":
                 print(S21)
             else:
@@ -148,3 +151,38 @@ elif user_input == "b":
     print (S1)
 else:
     print("Type 'a' for a and 'b' for b.")
+
+            user_input = input()
+            if user_input=="a":
+                print(S2221)
+            else:
+                print(S2222)
+                user_input = input()
+                if user_input=="a":
+                    print(S)
+                else:
+                    print(S)
+elif user_input == "b":
+    print(S1)
+    user_input = input()
+    if user_input=="b":
+        print(S11)
+    else:
+        print(S12)
+        user_input = input()
+        if user_input == "b":
+        user_input = input()
+            print(S111)
+        else:
+            print(S112)
+            user_input = input()
+            if user_input=="b":
+                print(S1111)
+            else:
+                print(S1122)
+                user_input = input()
+                if user_input=="a":
+                    print(S)
+                else:
+                    print(S)
+
